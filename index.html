@@ -174,27 +174,33 @@
         <h3>¿Que extension de imagen deseas para tu QR?</h3>
       </div>
       <div class="extension">
-        <form action="" class="imagen-generada">
-          <Fieldset>
-            <legend>
-              <label for="cars">Selecciona la extensión del archivo:</label>
-            </legend>
-          <select id="extension" name="extension" style="width: 200px;">
-            <option value="png">PNG</option>
-            <option value="svg">SVG</option>
-            <option value="jpg">JPG</option>
-          </select>
-          <a href="images/qr (1).png" role="button" download> 
-            Generar
-          </a>
-          </Fieldset>
-          <fieldset>
-            <legend>
-              Imagen Generada
-            </legend>
-          </fieldset>
-         </form>
-
+        <div class="imagen-generada">
+          <form action="" class="imagen-generada">
+            <Fieldset>
+              <legend>
+                <label for="extension">Selecciona la extensión del archivo:</label>
+              </legend>
+            <select id="extension" name="extension" style="width: 200px;">
+              <option value="png">PNG</option>
+              <option value="svg">SVG</option>
+              <option value="jpg">JPG</option>
+            </select>
+            <a href="images/qr (1).png" role="button" download> 
+              Generar
+            </a>
+          </form>
+          <form class="img-generate">
+            </Fieldset>
+            <fieldset>
+              <legend>
+                Imagen Generada
+              </legend>
+              <a href="images/qr (1).png" download>
+              <img src="images/qr (1).png" alt="QR" height="200" width="200" id="img-generate" style="display: none;">
+              </a>
+            </fieldset>
+          </form>
+        </div>
       </div>  
     </article>
 
