@@ -81,21 +81,7 @@ section{
   font-size: 25px;
 }
 /*///////////////////////////////////////////////////////////////////////////////////////////////*/
-@media screen and (max-width: 700px) {
-  .dos {
-    display: flex;
-    margin: 0.5em;
-}
-.dos img{
-  width: 50%;
-}
-section{
-    background-image: url(images/fondoQR.png);
-    background-size:cover;
-    background-repeat: no-repeat;
-}
 
-}
 
 
 .form-tamaño{
@@ -200,3 +186,72 @@ footer a{
   opacity: 1;
 }
 
+
+@media screen and (max-width: 600px) {
+  .form-tamaño{
+    font-size: 20px;
+    color: azure;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    text-shadow: #1b2328 3PX 1PX;
+  }
+  .form-tamaño IMG{
+    margin-left: 0.5em;
+    width: 80%;
+  }
+  
+  .select-extension fieldset{
+    display: inline-block;
+    margin-left: 20px; /* Ajusta el margen según tu preferencia*/
+    align-items: center;
+    justify-items: center;
+  }
+  .extension label{
+    font-size: 30px;
+  }
+  .extension fieldset{
+    font-size: 30px;
+    color: aliceblue;
+    text-shadow: #1b2328 3PX 3PX;
+    
+  }
+  .extension select{
+    font-size: 30px;
+  }
+  .select-extension img {
+    vertical-align: middle;
+  }
+  
+  .bton-generar{
+    font-size: 25px;
+    padding: 0.5em;
+    margin: 0.3em;
+    background-color:#CB9852;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .bton-generar:hover{
+    font-size: 30px;
+    padding: 0.5em;
+    margin: 0.3em;
+    background-color:#1A3648;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: #CB9852;
+  }
+  
+  .qr-generado{
+    padding: 1em;
+  }
+
+  .form-buttons button{
+    font-size: 15px;
+    padding: 0.5em;
+    margin: 0.3em;
+    background-color:#CB9852;
+    border-radius: 5px;
+  }
+  }

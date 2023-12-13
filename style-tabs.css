@@ -5,6 +5,7 @@
   border: solid rgba(0, 71, 18, 0.61) ;
   
 }
+
 .tab-list{
   margin: 1em;
 }
@@ -64,3 +65,24 @@ display: flex;
   cursor:pointer;
   font-weight: bolder;
 }
+
+
+@media screen and (max-width: 600px) {
+
+  .tab-list button {
+    font-size: 15px;
+    padding: 1em;
+    margin-left: 5em;
+  }
+  .contenido img{
+    width: 150px;
+    padding: 0.5em;
+    margin-left: 1em;
+  }
+  .tab-pane{
+    font-size: 20px;
+    color: aliceblue;
+  
+  }
+  }
+  

@@ -50,3 +50,59 @@
   width: 20px;
   height: 100px;
 }
+
+@media screen and (max-width: 600px) {
+  .form-color{
+    display: grid;
+    grid-template-areas: 
+    "azul verde morado "
+    "rojo celeste amarillo ";
+    padding: 1em;
+    align-items: center;
+    justify-items: center;
+    row-gap: 2em;
+  }
+  .negro{
+    grid-area: azul;
+  }
+    .negro img{
+    width: 100px;
+    height: 100px;
+  }
+  .verde{
+    grid-area: verde;
+  }
+  .verde img{
+    width: 100px;
+    height: 100px;
+  }
+  .morado{
+    grid-area: morado;
+  }
+  .morado img{
+    width: 100px;
+    height: 100px;
+  }
+  .rojo{
+    grid-area: rojo;
+  }
+  .rojo img{
+    width: 100px;
+    height: 100px;
+  }
+  .celeste{
+    grid-area: celeste;
+  }
+  .celeste img{
+    width: 100px;
+    height: 100px;
+  }
+  .amarillo{
+    grid-area: amarillo;
+  }
+  .amarillo img{
+    width: 100px;
+    height: 100px;
+  }
+  
+  }
