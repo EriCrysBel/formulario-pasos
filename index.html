@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar código QR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-tabs.css">
+    <link rel="stylesheet" href="style-formColor.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="logo">
+            <img src="images/Logo.png" alt="logotipoTandem">
+        </div>
+        <div class="titulo">
+            <h1>Proyecto TÁNDEM Aranjuez</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="formulario">
+            <article class="form-page active">
+                <div class="pasos">
+                    <h2>Contenido de tu QR</h2>
+                    <h3>¿Qué tipo de información quieres recopilar?</h3>
+                </div>
+
+                <div class="tab-component">
+                    <div class="tab-list">
+                        <button class="tab-link" data-target="url-pane">URL</button>
+                        <button class="tab-link" data-target="geolocation-pane">GEOLOCALIZACIÓN</button>
+                        <button class="tab-link" data-target="email-pane">EMAIL</button>
+                        <button class="tab-link" data-target="wifi-pane">WIFI</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="url-pane" class="tab-pane">
+
+                        <div class="contenido">
+                            <picture class="imagen">
+                                <img src="images/url.jpg" alt="url">
+                            </picture>
+                            <div class="formulario">
+                            <form >
+                                <label for="URL"  for="data">Escribe la URL</label>
+                                <input type="url" name="URL" placeholder="https://tuurl.com" style="width: 240px; height: 30px">
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div  class="tab-pane">
+
+                        <div class="contenido">
+                            
+                            <picture class="imagen">
+                                <img src="images/geolocalizacion.jpg" alt="geolocalizacion">
+                            </picture>
+                            <div class="formulario">
+                            <form>
+                                <label for="longitud">Longitud:</label> 
+                                <input type="text" id="longitud" name="longitud" pattern="^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?)$" required style="width: 250px; height: 20px" placeholder="40.0342762" id="data"><br>
+                                <label for="latitud">Latitud:</label> 
+                                <input type="text" id="latitud" name="latitud" pattern="^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?)$" required style="width: 275px; height: 20px" placeholder="-3.60766297">
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="email-pane" class="tab-pane">
+                        <div class="contenido">
+                            <picture class="imagen">
+                                <img src="images/email.jpg" alt="email" >
+                            </picture>
+                            <div class="formulario">
+                            <form >
+                                <label  for="email">Escribe tu email</label>
+                                <input type="email" name="email" required style="width: 250px; height: 20px" placeholder="tucorreo@email.com">
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="wifi-pane" class="tab-pane">
+                        <div class="contenido">        
+                            <picture class="imagen">
+                                <img src="images/wifi.jpg" alt="wifi" >
+                            </picture>
+                            <div class="formulario">
+                            <form>
+                                <label for="qr-data">Nombre de la Red:</label>
+                                <input type="text" id="qr-data" name="qr-data" style="width: 200px; height: 20px" placeholder="nombre-wifi"><br>
+                                <label for="qr-data">Contraseña de Red:</label>
+                                <input type="password" name="qr-data" style="width: 195px; height: 20px" placeholder="*******">
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="form-page">
+                <div class="pasos">
+                    <h2>Tamaño de tu QR</h2>
+                    <h3>¿Qué tamaño quieres para tu QR?</h3>
+                </div>
+                    <form class="form-tamaño" id="size">
+                        <div class="pequeño">
+                            <input type="radio" name="tamaño" id="tam-pequeño" checked> 
+                            <label for="tam-pequeño">Pequeño<img src="images/qr (1).png" alt="qr" width="100"></label>
+                        </div>
+                        <div class="mediano">
+                            <input type="radio" name="tamaño" id="tam-mediano">
+                            <label for="tam-mediano">Mediano<img src="images/qr (1).png" alt="qr" width="150"></label>
+                        </div>
+                        <div class="grande">
+                            <input type="radio" name="tamaño" id="tam-grande">    
+                            <label for="tam-grande">Grande<img src="images/qr (1).png" alt="qr" width="200"></label>
+                        </div>
+                    </form>
+            </article>
+
+            <article class="form-page">
+                <div class="pasos">
+                    <h2>Color de tu QR</h2>
+                    <h3>¿Qué color quieres para tu QR?</h3>
+                </div>
+                <form class="form-color" id="color">
+                    <div class="negro">
+                        <input type="radio" name="color" id="negro" checked> 
+                        <label for="negro" >
+                            <img src="images/qr (1).png" alt="qr" width="150"> 
+                        </label>
+                    </div>
+                    <div class="verde">
+                        <input type="radio" name="color" id="verde">
+                        <label for="verde">
+                            <img src="images/qr (2).png" alt="qr" width="150">
+                        </label>
+                    </div>
+                    <div class="morado">
+                        <input type="radio" name="color" id="morado">
+                        <label for="morado">
+                            <img src="images/qr (3).png" alt="qr" width="150">
+                        </label>
+                    </div>
+                    <div class="rojo">
+                        <input type="radio" name="color" id="rojo"> 
+                        <label for="rojo">
+                            <img src="images/qr (4).png" alt="qr" width="150">
+                        </label>
+                    </div>
+                    <div class="celeste">
+                        <input type="radio" name="color" id="celeste">
+                        <label for="celeste">
+                            <img src="images/qr (5).png" alt="qr" width="150">
+                        </label>
+                    </div>
+                    <div class="amarillo">
+                        <input type="radio" name="color" id="amarillo">
+                        <label for="amarillo">
+                            <img src="images/qr (7).png" alt="qr" width="150">
+                        </label>
+                    </div>
+                </form>
+            </article>
+
+            <article class="form-page">
+                <div class="pasos cuatro">
+                    <h2>Tipo de imagen del QR generado</h2>
+                    <h3>¿Qué extensión de imagen deseas para tu QR?</h3>
+                </div>
+
+                <div class="extension">
+                        <fieldset class="select-extension">
+                            <legend>
+                                <label for="extension">Selecciona la extensión del archivo:</label>
+                            </legend>
+                            <select id="extension" name="extension" style="width: 200px;">
+                                <option value="png">PNG</option>
+                                <option value="svg">SVG</option>
+                                <option value="jpg">JPG</option>
+                            </select>
+                            <button type="button" onclick="generarQR()" class="bton-generar" >Generar</button>
+                                                <div class="qr-generado" id="qrcode"></div>
+                        </fieldset>
+
+
+
+                </div>  
+            </article>
+
+            <article class="form-buttons">
+                <button type="button" id="botonSig" disabled>Anterior</button>
+                <button type="button" id="botonAnt">Siguiente</button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>Copyright &copy; 2023. Created by <strong><a href="https://github.com/EriCrysBel" target="_blank">Erika Crystal Bello Vargas</a></strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="qrcode.min.js"></script>
+</body>
+</html>

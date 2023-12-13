@@ -1,0 +1,52 @@
+.form-color{
+  display: grid;
+  grid-template-areas: 
+  "azul verde morado "
+  "rojo celeste amarillo ";
+  padding: 1em;
+  align-items: center;
+  justify-items: center;
+  row-gap: 2em;
+}
+.negro{
+  grid-area: azul;
+}
+  .negro input{
+  width: 20px;
+  height: 100px;
+}
+.verde{
+  grid-area: verde;
+}
+.verde input{
+  width: 20px;
+  height: 100px;
+}
+.morado{
+  grid-area: morado;
+}
+.morado input{
+  width: 20px;
+  height: 100px;
+}
+.rojo{
+  grid-area: rojo;
+}
+.rojo input{
+  width: 20px;
+  height: 100px;
+}
+.celeste{
+  grid-area: celeste;
+}
+.celeste input{
+  width: 20px;
+  height: 100px;
+}
+.amarillo{
+  grid-area: amarillo;
+}
+.amarillo input{
+  width: 20px;
+  height: 100px;
+}

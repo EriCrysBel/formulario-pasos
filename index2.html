@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generar QR</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div>
+        <label for="color">Color:</label>
+        <select id="color">
+            <option value="rojo">Rojo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+        </select>
+    </div>
+    <div>
+        <label for="size">Tamaño de la imagen:</label>
+        <input type="number" id="size" min="1" value="1">
+    </div>
+    <div>
+        <label for="extension">Extension del archivo:</label>
+        <input type="text" id="extension" value=".png">
+    </div>
+    <div id="qrcode"></div>
+    <button onclick="generarQR()">Generar QR</button>
+
+    <script>
+        function generarQR() {
+            var color = document.getElementById("color").value;
+            var size = document.getElementById("size").value;
+            var extension = document.getElementById("extension").value;
+
+            var qrcode = new QRCode("qrcode", {
+                text: color + ',' + size + ',' + extension,
+                width: 128,
+                height: 128,
+            });
+        }
+    </script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Generar QR</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <form id="imagenes">
+        <input type="checkbox" id="rojo" name="color" value="rojo">
+        <label for="rojo">Rojo</label><br>
+        <input type="checkbox" id="verde" name="color" value="verde">
+        <label for="verde">Verde</label><br>
+        <input type="checkbox" id="azul" name="color" value="azul">
+        <label for="azul">Azul</label><br>
+        <input type="checkbox" id="negro" name="color" value="negro">
+        <label for="negro">Negro</label><br>
+        <input type="checkbox" id="blanco" name="color" value="blanco">
+        <label for="blanco">Blanco</label><br>
+        <input type="checkbox" id="gris" name="color" value="gris">
+        <label for="gris">Gris</label><br>
+    </form>
+
+    <div id="qrcode"></div>
+
+    <button onclick="generarQR()">Generar QR</button>
+
+    <script>
+        function generarQR() {
+            var colores = [];
+            var checkboxes = document.getElementsByName("color");
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    colores.push(checkboxes[i].value);
+                }
+            }
+
+            var qrcode = new QRCode("qrcode", {
+                text: colores.join(','),
+                width: 128,
+                height: 128,
+            });
+        }
+    </script>
+</body>
+</html> -->
